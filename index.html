@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/icon-rock.svg">
+  
+  <title>Rock, Paper, Scissors</title>
+
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+  <main class="main">
+
+
+    <div class="rules-container" id="rules">
+        <div class="rules"></div>
+    </div>
+
+
+
+    <div class="options-score">
+      <div class="options">
+        <p id="rock">ROCK</p>
+        <p id="paper">PAPER</p>
+        <p id="scissors">SCISSORS</p>
+        <p id="lizard">LIZARD</p>
+        <p id="spock">SPOCK</p>
+      </div>
+      <div class="score-container">
+          <p class="score-label">SCORE</p>
+          <p id="score" class="score" ></p>
+      </div>
+    </div>
+
+    <div id="select-screen" class="select-screen">
+      <div id="select-start" class="select-start">
+        <p>SELECT TO START GAME</p>
+      </div>
+      <div class="game-icons">
+          <div id="lizardIcon" class="lizardIcon"></div>
+          <div id="spockIcon" class="spockIcon"></div>
+          <div id="rockIcon" class="rockIcon"></div>
+          <div id="paperIcon" class="paperIcon"></div>
+          <div id="scissorsIcon" class="scissorsIcon"></div>
+      </div>
+    </div>
+
+    
+  
+
+    <div id="game-screen" class="game"> 
+
+        <div id="user-choice" class="user-choice">
+          <p id="user-header">YOU PICKED</p>
+          <div id="user-icon"></div>
+        </div>
+
+        
+        <div id="result-container" class="result-container">
+          <p id="game-result"></p>
+          <button id="play-again"></button>
+        </div>
+
+        <div id="computer-choice" class="computer-choice">
+          <p id="computer-header">THE HOUSE PICKED</p>
+          <div id="computer-icon" class="choice-icon"></div>
+        </div>
+
+    </div>
+
+  </main>
+
+  <footer class="footer">
+    <button id="rules-button">RULES</button><button id="clear-button">RESET SCORE</button>
+  </footer>
+  <script src="./index.js"></script>
+</body>
+</html>

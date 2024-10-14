@@ -1,0 +1,1178 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+    background-repeat: repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: space-evenly;
+    font-family: "Barlow Semi Condensed", sans-serif;
+    height: 100vh;
+    caret-color: transparent;
+}
+
+.main {
+    width: 70%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+@media screen and (max-width: 1600px) {
+
+
+    .main {
+        width: 90%;
+        height: 84%;
+        justify-content: start;
+    }
+}
+
+
+.options-score {
+    border: 1px solid rgb(148, 148, 148);
+    width: 80%;
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 2;
+    margin-top: 10px;
+}
+
+.score-container {
+    text-align: center;
+    width: 200px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0px 2px 0px 1px hsl(217, 16%, 45%);
+    height: 100%;
+}
+
+.score-label  {
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: 2px;
+    margin-bottom: 0px;
+    color: hsl(229, 64%, 46%);
+    cursor: default;
+}
+
+.score {
+    font-size: 60px;
+    font-weight: 700;
+    margin: 0;
+    margin-bottom: 15px;
+    color: hsl(229, 25%, 31%);
+    transition: 0.2s;
+    cursor: default;
+}
+
+
+.options {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.options > * {
+    margin: 0;
+    font-size:30px;
+    font-weight: 700;
+    color: white;
+    line-height: 25px;
+    transition: 0.2s;
+    text-shadow: 0px 2px 0px rgb(95, 95, 95);
+    width: fit-content;
+    cursor: default;
+}
+
+.options > *:hover {
+    color: rgb(190, 166, 114);
+    cursor: pointer;
+    transform: scale(1.1);
+} 
+
+
+@media screen and (max-width: 600px) {
+    .options-score {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .options {
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+
+    .options > * {
+        font-size: 20px;
+        line-height: 20px;
+    }
+
+    .score-container {
+        margin-top: 20px;
+        width: 100%;
+    }
+
+    .score {
+        font-size: 25px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Selection Screen */
+
+
+
+.select-screen {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 600px;
+}
+
+.select-start {
+    text-align: center;
+    width: 400px;
+    margin-bottom: 70px;
+    font-size: 35px;
+    font-weight: 700;
+    color: white;
+
+    animation-name: textFloat;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate-reverse;
+}
+
+@keyframes textFloat {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(20px);
+    }
+}
+
+.game-icons {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    height: 100%;
+    width: 100%;
+}
+
+.game-icons > * {
+    margin: 15px 15px 15px 15px;
+}
+
+.game-icons > *:hover {
+
+    transform: scale(1.1);
+}
+
+
+.game-icons > *:active {
+    transform: scale(0.9);
+}
+
+
+.lizardIcon {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    background-color: white;
+    position: relative;
+    box-shadow: 0px 5px 0px 3px hsl(261, 76%, 26%), 0px 5px 0px 3px hsl(43, 5%, 72%) inset;
+    border: 20px solid hsl(261, 69%, 48%);
+    border-radius: 100%;
+    background-image: url("./images/icon-lizard.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.spockIcon {
+    width: 150px;
+    height: 150px;
+    border: 1px solid white;
+    position: relative;
+    background-color: white;
+    box-shadow: 0px 5px 0px 3px hsl(189, 60%, 29%), 0px 5px 0px 3px hsl(43, 5%, 72%) inset;
+    border: 20px solid hsl(189, 59%, 53%);
+    border-radius: 100%;
+    background-image: url("./images/icon-spock.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    transition: 0.2s;
+
+
+    animation-delay: 0.4s;
+}
+
+.rockIcon {
+    width: 150px;
+    height: 150px;
+    border: 1px solid white;
+    position: relative;
+    background-color: white;
+    box-shadow: 0px 5px 0px 3px hsl(349, 83%, 31%), 0px 5px 0px 3px hsl(43, 5%, 72%) inset;
+    border: 20px solid hsl(349, 98%, 41%);
+    border-radius: 100%;
+    background-image: url("./images/icon-rock.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    transition: 0.2s;
+
+
+    animation-delay: 0.8s;
+}
+
+.paperIcon {
+    width: 150px;
+    height: 150px;
+    border: 1px solid white;
+    position: relative;
+    background-color: white;
+    box-shadow: 0px 5px 0px 3px hsl(230, 74%, 35%), 0px 5px 0px 3px hsl(43, 5%, 72%) inset;
+    border: 20px solid hsl(230, 80%, 53%);
+    border-radius: 100%;
+    background-image: url("./images/icon-paper.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    transition: 0.2s;
+
+
+    animation-delay: 1.2s;
+}
+
+
+.scissorsIcon {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    background-color: white;
+    box-shadow: 0px 5px 0px 3px hsl(39, 89%, 36%), 0px 5px 0px 3px hsl(43, 5%, 72%) inset;
+    border: 20px solid hsl(40, 84%, 53%);
+    border-radius: 100%;
+    background-image: url("./images/icon-scissors.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    transition: 0.2s;
+    
+
+
+    animation-delay: 1.6s;
+}
+
+@media screen and (max-width: 1600px) {
+    
+    .game-icons > * {
+        height: 135px;
+        width: 135px;
+        background-size: 50%;
+    }
+}
+
+
+
+@media screen and (max-width: 1000px) {
+    .select-screen {
+        height: 50%;
+    }
+
+    .game-icons > * {
+        height: 50px;
+        width: 50px;
+        background-size: 50%;
+    }
+
+    .rockIcon {
+        border: 8px solid hsl(349, 98%, 41%);
+    }
+
+    .paperIcon {
+        border: 8px solid hsl(230, 80%, 53%);
+    }
+
+    .scissorsIcon {
+        border: 8px solid hsl(40, 84%, 53%);
+    }
+
+    .lizardIcon {
+        border: 8px solid hsl(261, 69%, 48%);
+    }
+
+    .spockIcon {
+        border: 8px solid hsl(189, 59%, 53%);
+    }
+
+    .select-start {
+        margin-bottom: 5px;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .select-start {
+        font-size: 25px;
+        width: fit-content;
+    }
+
+    .game-icons {
+        margin-bottom: 5px;
+    }
+
+    .game-icons > * {
+        height: 45px;
+        width: 45px;
+        background-size: 40%;
+    }
+
+    .rockIcon {
+        box-shadow: 0px 3px 0px 1px hsl(349, 83%, 31%), 0px 3px 0px 1px hsl(43, 5%, 72%) inset;
+    }
+
+    .paperIcon {
+        box-shadow: 0px 3px 0px 1px hsl(230, 74%, 35%), 0px 3px 0px 1px hsl(43, 5%, 72%) inset;
+    }
+
+    .scissorsIcon {
+        box-shadow: 0px 3px 0px 1px hsl(39, 89%, 36%), 0px 3px 0px 1px hsl(43, 5%, 72%) inset;
+    }
+
+    .lizardIcon {
+        box-shadow: 0px 3px 0px 1px hsl(261, 76%, 26%), 0px 3px 0px 1px hsl(43, 5%, 72%) inset;
+    }
+
+    .spockIcon {
+        box-shadow: 0px 3px 0px 1px hsl(189, 60%, 29%), 0px 3px 0px 1px hsl(43, 5%, 72%) inset;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Initiated Selection Animations */ 
+
+
+/* Longest animation time in this sequence 2s */
+
+.select-start-remove {
+    text-align: center;
+    width: 400px;
+    margin-bottom: 70px;
+    font-size: 35px;
+    font-weight: 700;
+    color: white;
+
+
+    animation-name: selectStartRemove;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+
+
+
+.lizardIcon-select {
+    animation-name: initiatedSelect;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+.spockIcon-select {
+    animation-name: initiatedSelect;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+.rockIcon-select {
+    animation-name: initiatedSelect;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+.paperIcon-select {
+    animation-name: initiatedSelect;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+.scissorsIcon-select {
+    animation-name: initiatedSelect;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+
+
+@keyframes initiatedSelect {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(0);
+    }
+}
+
+@keyframes selectStartRemove {
+    0% {
+        transform: translateY(20px);
+    }
+
+    50% {
+        opacity: 1;
+        transform: translateY(-30px);
+    }
+
+    100% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Game section after selection */
+
+
+.select-screen-remove {
+    display: none;
+}
+
+.add-game-screen {
+    display: flex;
+    visibility: visible;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+    height: 600px;
+}
+
+
+.game {
+    display: none;
+    visibility: hidden;
+}
+
+
+.result-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+
+
+
+
+.result-container > button {
+    transition: 0.2s ease-in-out;
+}
+
+.result-container > button:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+
+@media screen and (max-height: 800px) {
+    .result-container {
+        height: 100px;
+        padding: 0;
+    }
+
+    .result-container > * {
+        margin: 0;
+    }
+
+    .result-container > p {
+        font-size: 13px;
+    }
+
+    .result-container > button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: 13px;
+        height: 15px;
+    }
+}
+
+
+
+
+
+
+
+
+/* Result inital state */
+
+.result-text-inital {
+    width: 0px;
+    visibility: hidden;
+}
+
+.result-btn-initial {
+    width: 0px;
+    visibility: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* User initial state */
+
+
+
+.user-choice {
+    text-align: center;
+}
+
+.user-choice > p {
+    font-weight: 700px;
+    margin-bottom: 40px;
+    font-size: 20px;
+    color: white;
+    letter-spacing: 5px;
+}
+
+
+
+
+
+
+.unselected {
+    width: 250px;
+    height: 250px;
+    border-radius: 100%;
+    background-color: #17223e;
+    box-shadow: 0px 5px 0px 3px #131c33;
+}
+
+
+.computer-choice {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+.computer-choice > p {
+    font-weight: 700px;
+    margin-bottom: 40px;
+    font-size: 20px;
+    color: white;
+    letter-spacing: 5px;
+}
+
+
+
+
+
+@media screen and (max-width: 1900px) {
+    #game-result {
+        font-size: 25px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Active States */
+
+
+.active-result-text {
+    font-size: 45px;
+    font-weight: 700;
+    color: white;
+    text-shadow: 0px 2px 0px rgb(95, 95, 95);
+    letter-spacing: 3px;
+    position: relative;
+    visibility: visible;
+    width: fit-content;
+    margin: 0px 40px 30px 40px;
+    animation-name: selectedAnimation;
+    animation-duration: 100ms;
+    animation-timing-function: ease-in;
+}
+
+.active-play-btn {
+    padding: 15px 50px 15px 50px;
+    font-weight: 600;
+    color: hsl(229, 25%, 31%);
+    background-color: white;
+    border: none;
+    box-shadow: 0px 1px 0px 1px hsl(229, 25%, 31%);
+    border-radius: 5px;
+    visibility: visible;
+    width: 200px;
+    animation-name: selectedAnimation;
+    animation-duration: 100ms;
+    animation-timing-function: ease-in-out;
+}
+
+
+
+
+@keyframes selectedAnimation {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Scissors Active State */
+
+.scissors-selected {
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    padding: 40px;
+    background-color: white;
+    position: relative;
+    box-shadow: 0px 5px 0px 3px hsl(39, 89%, 36%), 0px 5px 0px 3px hsl(43, 5%, 72%) inset;
+    border: 30px solid hsl(40, 84%, 53%);
+    background-image: url("./images/icon-scissors.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 120px;
+    animation-name: selectedAnimation;
+    animation-duration: 100ms;
+    animation-timing-function: ease-in;
+}
+
+
+
+
+
+/* Paper Active State */
+
+.paper-selected {
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    padding: 40px;
+    background-color: white;
+    box-shadow: 0px 5px 0px 3px hsl(230, 74%, 35%), 0px 5px 0px 3px hsl(43, 5%, 72%) inset;
+    border: 30px solid hsl(230, 80%, 53%);
+    background-image: url("./images/icon-paper.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 120px;
+    animation-name: selectedAnimation;
+    animation-duration: 100ms;
+    animation-timing-function: ease-in;
+}
+
+
+
+
+/* Rock Active State */ 
+
+.rock-selected {
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    padding: 40px;
+    background-color: white;
+    box-shadow: 0px 5px 0px 3px hsl(349, 83%, 31%), 0px 5px 0px 3px hsl(43, 5%, 72%) inset;
+    border: 30px solid hsl(349, 98%, 41%);
+    background-image: url("./images/icon-rock.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 120px;
+    animation-name: selectedAnimation;
+    animation-duration: 100ms;
+    animation-timing-function: ease-in;
+}
+
+
+
+/* Lizard Active State */ 
+
+.lizard-selected {
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    padding: 40px;
+    background-color: white;
+    position: relative;
+    box-shadow: 0px 5px 0px 3px hsl(261, 76%, 26%), 0px 5px 0px 3px hsl(43, 5%, 72%) inset;
+    border: 30px solid hsl(261, 69%, 48%);
+    background-image: url("./images/icon-lizard.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 120px;
+    animation-name: selectedAnimation;
+    animation-duration: 100ms;
+    animation-timing-function: ease-in;
+}
+
+
+/* Spock Active State */
+
+.spock-selected {
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    padding: 40px;
+    background-color: white;
+    box-shadow: 0px 5px 0px 3px hsl(189, 60%, 29%), 0px 5px 0px 3px hsl(43, 5%, 72%) inset;
+    border: 30px solid hsl(189, 59%, 53%);
+    background-image: url("./images/icon-spock.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 120px;
+    animation-name: selectedAnimation;
+    animation-duration: 100ms;
+    animation-timing-function: ease-in;
+}
+
+
+
+
+
+/* Winning Style */ 
+
+
+.win-shadow-initial {
+    opacity: 0;
+    z-index: -1;
+}
+
+.win-shadow-active {
+    opacity: 1;
+    z-index: -1;
+    animation-name: shadowWinAnimation;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes shadowWinAnimation {
+    0% {
+        box-shadow: 0px 00px 0px 80px rgba(119, 119, 119, 0.1);
+    }
+    50% {
+        box-shadow: 0px 00px 0px 80px rgb(119, 119, 119, 0.1), 0px 00px 0px 160px rgba(160, 160, 160, 0.1);
+    }
+    100% {
+        box-shadow: 0px 00px 0px 80px rgb(119, 119, 119, 0.1), 0px 00px 0px 160px rgba(160, 160, 160, 0.1), 0px 00px 0px 240px rgba(214, 214, 214, 0.1);
+    }
+}
+
+
+
+
+
+
+/* Show Rules */ 
+
+
+
+.footer {
+    margin-top: 40px;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    height: fit-content;
+}
+
+.footer > button {
+    padding: 10px 30px 10px 30px;
+    border-radius: 10px;
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    letter-spacing: 2px;
+    font-weight: 600;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.footer > button:hover {
+    padding: 10px 50px 10px 50px;
+
+}
+
+
+.rules-container {
+    opacity: 0;
+    position: absolute;
+}
+
+.rules-container-close {
+    animation-name: closeRules;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+
+    margin-top: 10px;
+    position: absolute;
+    z-index: 0;
+    width: 70%;
+    height: 80%;
+    background-color: white;
+    padding: 30px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+}
+
+@keyframes closeRules {
+    from {
+        transform: translateY(0);
+        z-index: 6;
+        opacity: 1;
+
+    }
+    to {
+        transform: translateY(-10px);
+        opacity: 0;
+    }
+}
+
+
+@keyframes showRules {
+    from {
+        transform: translateY(10px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+
+.rules-container-open {
+    margin-top: 10px;
+    position: absolute;
+    z-index: 6;
+    width: 70%;
+    height: 80%;
+    background-color: white;
+    padding: 30px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+
+    animation-name: showRules;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+
+.rules {
+    width: 90%;
+    height: 90%;
+    background-image: url('./images/image-rules-bonus.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin-bottom: 20px;
+}
+
+
+
+.disable-rules {
+    visibility: hidden;
+}
+
+
+.enable-rules {
+    visibility: visible;
+    position: absolute;
+    z-index: 6;
+    width: 70%;
+    height: 80%;
+    background-color: white;
+    padding: 30px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Game for smaller screens */
+
+
+.small-screen-game-active {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    height: 400px;
+}
+
+.unselected-small-active {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background-color: #17223e;
+    box-shadow: 0px 5px 0px 3px #131c33;
+}
+
+
+.unselected-small-unactive {
+    display: none;
+}
+
+
+
+.icon-container-small {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+
+/* Scissors Small Active State */
+
+.scissors-selected-small {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background-color: white;
+    position: relative;
+    box-shadow: 0px 3px 0px 1px hsl(39, 89%, 36%), 0px 3px 0px 1px hsl(43, 5%, 72%) inset;
+    border: 8px solid hsl(40, 84%, 53%);
+    background-image: url("./images/icon-scissors.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 60%;
+
+}
+
+
+
+
+
+/* Paper Small Active State */
+
+.paper-selected-small {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background-color: white;
+    box-shadow: 0px 3px 0px 1px hsl(230, 74%, 35%), 0px 3px 0px 1px hsl(43, 5%, 72%) inset;
+    border: 8px solid hsl(230, 80%, 53%);
+    background-image: url("./images/icon-paper.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 60%;
+
+}
+
+
+
+
+/* Rock Small Active State */ 
+
+.rock-selected-small {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background-color: white;
+    box-shadow: 0px 3px 0px 1px hsl(349, 83%, 31%), 0px 3px 0px 1px hsl(43, 5%, 72%) inset;
+    border: 8px solid hsl(349, 98%, 41%);
+    background-image: url("./images/icon-rock.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 60%;
+
+}
+
+
+
+/* Lizard Small Active State */ 
+
+.lizard-selected-small {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background-color: white;
+    position: relative;
+    box-shadow: 0px 3px 0px 1px hsl(261, 76%, 26%), 0px 3px 0px 1px hsl(43, 5%, 72%) inset;
+    border: 8px solid hsl(261, 69%, 48%);
+    background-image: url("./images/icon-lizard.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 60%;
+
+}
+
+
+/* Spock Small Active State */
+
+.spock-selected-small {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background-color: white;
+    box-shadow: 0px 3px 0px 1px hsl(189, 60%, 29%), 0px 3px 0px 1px hsl(43, 5%, 72%) inset;
+    border: 8px solid hsl(189, 59%, 53%);
+    background-image: url("./images/icon-spock.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 60%;
+
+}
